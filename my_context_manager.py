@@ -9,5 +9,6 @@ class MyContextManager:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.stop = datetime.now()
+        self.time = self.stop - self.start
         print('Код остановлен:', self.stop)
-        print('Время работы:', self.stop - self.start)
+        print('Время работы:', self.time)
